@@ -18,7 +18,7 @@ client.once('ready', (client) => {
 client.on('voiceStateUpdate', async (oldState, newState) => {
     if (oldState.channelId !== newState.channelId && newState.channelId !== null && newState.member.id === benId) {
         console.log(`${newState.member.displayName} joined!`);
-        await client.channels.cache.get(channelId).send(":musical_note: It's Ben!");
+        //await client.channels.cache.get(channelId).send(":musical_note: It's Ben!");
         
         const connection = joinVoiceChannel({
             channelId: newState.channelId,
